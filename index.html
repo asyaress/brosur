@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Display</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2e8c6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .poster-container {
+            background-color: #ffffff;
+            border: 2px solid #d9cdbf;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+
+            /* Animasi */
+            opacity: 0; /* Awal transparan */
+            transform: translateY(30px); /* Awal di bawah */
+            animation: fadeInSlideUp 1.2s ease-out forwards; /* Animasi muncul */
+        }
+
+        .poster-container img {
+            width: 240px; /* Atur lebar poster */
+            height: auto; /* Jaga proporsi asli */
+            border-radius: 4px;
+        }
+
+        .poster-title {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #6b5c4c;
+        }
+
+        .poster-title a {
+            text-decoration: none;
+            color: #6b5c4c;
+            font-weight: bold;
+        }
+
+        .poster-title a:hover {
+            color: #d87c42;
+        }
+
+        /* Keyframes untuk animasi */
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <img src="./asset/tes.jpg" alt="Poster Image">
+        <div class="poster-title">
+            <a href="https://drive.google.com/file/d/1mI7pmGLgNiDhvfs6TJ40544xS887lBR4/view?usp=drive_link" target="_blank">
+                Klik disini untuk untuk <i>download</i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
